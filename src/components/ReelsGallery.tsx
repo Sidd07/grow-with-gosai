@@ -52,7 +52,7 @@ export function ReelsGallery() {
                                 className="w-full h-full rounded-xl pointer-events-auto"
                                 frameBorder="0"
                                 scrolling="no"
-                                allowtransparency="true"
+                                allowTransparency={true}
                                 allow="encrypted-media"
                             ></iframe>
                         </div>
