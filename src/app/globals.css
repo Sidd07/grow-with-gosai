@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+}
+
+:root {
+  /* Light Mode - "Ethereal Estate" */
+  --background: #FDFCF8;
+  /* Warm Alabaster */
+  --foreground: #2C2C2C;
+  /* Charcoal */
+
+  --card: #F5F2EB;
+  /* Soft Beige */
+  --card-foreground: #2C2C2C;
+
+  --primary: #bf9f68;
+  /* Champagne */
+  --primary-foreground: #2C2C2C;
+
+  --secondary: #E2E8F0;
+  /* Platinum */
+  --secondary-foreground: #2C2C2C;
+
+  --accent: #C9A961;
+  /* Classic Gold */
+  --accent-foreground: #FFFFFF;
+
+  --muted: #5A5A5A;
+  --muted-foreground: #71717A;
+
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #D4C4A8;
+
+  /* Legacy Compat */
+  --bg-dark: var(--background);
+  --bg-card: var(--card);
+  --text-light: var(--foreground);
+  --accent-blue: var(--primary);
+  --accent-blue-dim: #C3B091;
+}
+
+.dark {
+  /* Dark Mode - "Midnight Estate" */
+  --background: #020617;
+  /* Deep Navy */
+  --foreground: #F8FAFC;
+  /* White (General Text) */
+
+  --card: #0F172A;
+  /* Slate */
+  --card-foreground: #F8FAFC;
+
+  --primary: #D4C4A8;
+  /* Beige (Buttons, Keywords, Titles) */
+  --primary-foreground: #020617;
+
+  --secondary: #1E293B;
+  --secondary-foreground: #F8FAFC;
+
+  --accent: #F59E0B;
+  /* Yellow/Gold (Subtitles/Accents) */
+  --accent-foreground: #020617;
+
+  --muted: #94A3B8;
+  --muted-foreground: #A1A1AA;
+
+  --border: #1E293B;
+  --input: #1E293B;
+  --ring: #D4C4A8;
+
+  /* Legacy Compat */
+  --bg-dark: var(--background);
+  --bg-card: var(--card);
+  --text-light: var(--foreground);
+  --accent-blue: var(--primary);
+  --accent-blue-dim: #C3B091;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
