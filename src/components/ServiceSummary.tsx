@@ -2,15 +2,9 @@
 
 import { Button } from "@/components/ui/Button"
 import Link from "next/link"
-import { Building2, TrendingUp, Home } from "lucide-react"
+import { Building2, TrendingUp, Home, ArrowRight, Shield, Key } from "lucide-react"
 
 const services = [
-    {
-        icon: Building2,
-        title: "Commercial Sales & Leasing",
-        description: "Expert guidance in acquiring and disposing of office, retail, and industrial assets. We maximize value through strategic positioning and market intelligence.",
-        href: "/services/commercial-sales"
-    },
     {
         icon: TrendingUp,
         title: "Investment Advisory",
@@ -18,10 +12,28 @@ const services = [
         href: "/services/investment-advisory"
     },
     {
+        icon: Building2,
+        title: "Commercial Sales",
+        description: "Expert guidance in acquiring and disposing of office, retail, and industrial assets. We maximize value through strategic positioning.",
+        href: "/services/commercial-sales"
+    },
+    {
         icon: Home,
-        title: "Luxury Residential",
+        title: "Residential Sales",
         description: "Bespoke service for high-net-worth individuals seeking premium residential properties. Access to exclusive off-market listings.",
-        href: "/services/luxury-residential"
+        href: "/services/residential-sales"
+    },
+    {
+        icon: Shield,
+        title: "Exclusive Listing",
+        description: "Strategic marketing and confidential disposition strategies for high-value properties and business assets.",
+        href: "/services/exclusive-listing"
+    },
+    {
+        icon: Key,
+        title: "Leasing",
+        description: "Connecting premium tenants with exceptional properties, covering both commercial retail and luxury residential relocations.",
+        href: "/services/leasing"
     },
 ]
 

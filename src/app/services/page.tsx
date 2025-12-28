@@ -17,17 +17,41 @@ export default function ServicesPage() {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {[
-                        { name: "Commercial Sales", slug: "commercial-sales", desc: "Maximizing value through strategic positioning and global reach." },
-                        { name: "Leasing", slug: "leasing", desc: "Connecting premium tenants with exceptional properties." },
-                        { name: "Investment Advisory", slug: "investment-advisory", desc: "Data-driven insights to build and sustain generational wealth." }
+                        {
+                            name: "Investment Advisory",
+                            slug: "investment-advisory",
+                            desc: "Data-driven strategies to build and sustain generational wealth through sophisticated portfolio management."
+                        },
+                        {
+                            name: "Commercial Sales",
+                            slug: "commercial-sales",
+                            desc: "Maximizing value through strategic positioning, global reaching, and expert negotiation of prime assets."
+                        },
+                        {
+                            name: "Residential Sales",
+                            slug: "residential-sales",
+                            desc: "Bespoke residential solutions for high-net-worth individuals, focusing on luxury, discretion, and market precision."
+                        },
+                        {
+                            name: "Exclusive Listing",
+                            slug: "exclusive-listing",
+                            desc: "A strategic 'List With Us' approach, offering both Public MLS® and confidential Private sales strategies."
+                        },
+                        {
+                            name: "Leasing",
+                            slug: "leasing",
+                            desc: "Comprehensive leasing solutions for commercial retail, office, and luxury residential executive relocations."
+                        }
                     ].map((service) => (
-                        <div key={service.slug} className="p-10 bg-[var(--card)] rounded-sm shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-[var(--border)]/30">
-                            <h3 className="text-3xl font-serif font-light text-[var(--foreground)] mb-6 group-hover:text-[var(--accent)] transition-colors">{service.name}</h3>
-                            <p className="text-[var(--muted-foreground)] mb-10 font-light leading-relaxed min-h-[80px]">
-                                {service.desc}
-                            </p>
+                        <div key={service.slug} className="p-10 bg-[var(--card)] rounded-sm shadow-sm hover:shadow-xl transition-all duration-500 group border border-transparent hover:border-[var(--border)]/30 flex flex-col justify-between">
+                            <div>
+                                <h3 className="text-3xl font-serif font-light text-[var(--foreground)] mb-6 group-hover:text-[var(--accent)] transition-colors">{service.name}</h3>
+                                <p className="text-[var(--muted-foreground)] mb-10 font-light leading-relaxed min-h-[80px]">
+                                    {service.desc}
+                                </p>
+                            </div>
                             <Link href={`/services/${service.slug}`}>
                                 <Button variant="outline" className="w-full h-12 border-[var(--border)] text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white hover:border-transparent uppercase tracking-[0.2em] text-xs font-bold rounded-sm transition-all">
                                     Learn More

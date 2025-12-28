@@ -29,11 +29,10 @@ export function Navbar() {
     // Luxury Text Logic:
     // Always dark text in light mode (default), white in dark mode.
     // Exception: If on Home Page AND NOT scrolled, use White (for Hero overlay).
-    // Exception: If on Home Page or Commercial Sales or Investment Advisory AND NOT scrolled, use White (for Hero overlay).
+    // Exception: If on Home Page or Commercial Sales or Investment Advisory or Residential Sales or Exclusive Listing or Leasing AND NOT scrolled, use White (for Hero overlay).
     const isHome = pathname === "/"
-    const isCommercialSales = pathname === "/services/commercial-sales"
-    const isInvestmentAdvisory = pathname === "/services/investment-advisory"
-    const isTransparent = (isHome || isCommercialSales || isInvestmentAdvisory) && !scrolled
+    const isServicePage = pathname?.startsWith("/services/")
+    const isTransparent = (isHome || isServicePage) && !scrolled
 
     return (
         <motion.nav
@@ -95,14 +94,20 @@ export function Navbar() {
                                             transition={{ duration: 0.3, ease: "easeOut" }}
                                             className="absolute top-full left-1/2 -translate-x-1/2 pt-6"
                                         >
-                                            <div className="bg-[var(--card)] border border-[var(--border)] shadow-2xl rounded-sm p-2 min-w-[200px]">
-                                                {["Commercial Sales", "Leasing", "Investment Advisory"].map((subItem) => (
+                                            <div className="bg-[var(--card)] border border-[var(--border)] shadow-2xl rounded-sm p-2 min-w-[240px]">
+                                                {[
+                                                    { name: "Investment Advisory", href: "/services/investment-advisory" },
+                                                    { name: "Commercial Sales", href: "/services/commercial-sales" },
+                                                    { name: "Residential Sales", href: "/services/residential-sales" },
+                                                    { name: "Exclusive Listing", href: "/services/exclusive-listing" },
+                                                    { name: "Commercial & Residential Leasing", href: "/services/leasing" }
+                                                ].map((subItem) => (
                                                     <Link
-                                                        key={subItem}
-                                                        href={`/services/${subItem.toLowerCase().replace(" ", "-")}`}
+                                                        key={subItem.name}
+                                                        href={subItem.href}
                                                         className="block px-4 py-3 text-xs uppercase tracking-wider text-[var(--foreground)] hover:bg-[var(--primary)]/10 hover:text-[var(--primary)] transition-colors"
                                                     >
-                                                        {subItem}
+                                                        {subItem.name}
                                                     </Link>
                                                 ))}
                                             </div>
