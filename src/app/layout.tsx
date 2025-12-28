@@ -13,8 +13,11 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Premium Commercial Real Estate",
-  description: "Exclusive commercial properties for discerning buyers.",
+  title: {
+    default: "Grow with Gosai | Premium Real Estate Collectives",
+    template: "%s | Grow with Gosai"
+  },
+  description: "Exclusive commercial and residential real estate portfolios for the visionary investor.",
 };
 
 import { Navbar } from "@/components/Navbar";

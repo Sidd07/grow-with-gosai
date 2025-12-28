@@ -42,7 +42,7 @@ export function ContactSection() {
     }
 
     return (
-        <section className="py-40 bg-[var(--card)]">
+        <section className="py-20 bg-[var(--card)]">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                     <div>
@@ -54,24 +54,42 @@ export function ContactSection() {
                             Whether you&apos;re looking to buy, sell, or lease, our team is ready to provide the strategic guidance you need.
                         </p>
 
-                        <div className="space-y-8">
-                            <div className="p-8 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50">
-                                <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs">Office</h4>
-                                <p className="text-[var(--muted-foreground)] font-light">73 Water St N Unit # 300<br />Cambridge, ON N1R 7L6</p>
+                        <div className="p-10 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-12">
+                                {/* Row 1: Office & Email */}
+                                <div>
+                                    <h4 className="text-[var(--foreground)] font-bold mb-3 uppercase tracking-wider text-xs">Office</h4>
+                                    <p className="text-[var(--muted-foreground)] font-normal text-base leading-relaxed">
+                                        73 Water St N Unit # 300<br />
+                                        Cambridge, ON N1R 7L6
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="text-[var(--foreground)] font-bold mb-3 uppercase tracking-wider text-xs">Email</h4>
+                                    <a href="mailto:meet@growwithgosai.com" className="text-[var(--muted-foreground)] font-normal text-base leading-relaxed hover:text-[var(--primary)] transition-colors block">
+                                        meet@growwithgosai.com
+                                    </a>
+                                </div>
+
+                                {/* Row 2: Instagram & Phone */}
+                                <div>
+                                    <h4 className="text-[var(--foreground)] font-bold mb-3 uppercase tracking-wider text-xs">Instagram</h4>
+                                    <a
+                                        href="https://www.instagram.com/GrowwithGosai/"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="text-[var(--primary)] font-normal text-base hover:underline transition-all block"
+                                    >
+                                        @GrowwithGosai
+                                    </a>
+                                </div>
+                                <div>
+                                    <h4 className="text-[var(--foreground)] font-bold mb-3 uppercase tracking-wider text-xs">Phone</h4>
+                                    <a href="tel:6476758404" className="text-[var(--muted-foreground)] font-normal text-base leading-relaxed hover:text-[var(--primary)] transition-colors block">
+                                        (647) 675-8404
+                                    </a>
+                                </div>
                             </div>
-                            <div className="p-8 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50">
-                                <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs">Contact</h4>
-                                <p className="text-[var(--muted-foreground)] font-light">meet@growwithgosai.com<br />(647) 675-8404</p>
-                            </div>
-                            <a
-                                href="https://www.instagram.com/GrowwithGosai/"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="block p-8 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50 hover:border-[var(--primary)]/50 transition-colors group"
-                            >
-                                <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs group-hover:text-[var(--primary)] transition-colors">Instagram</h4>
-                                <p className="text-[var(--muted-foreground)] font-light group-hover:text-[var(--foreground)] transition-colors">@GrowwithGosai</p>
-                            </a>
                         </div>
                     </div>
 
