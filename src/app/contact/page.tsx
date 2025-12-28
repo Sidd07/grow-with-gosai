@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/Button"
-import { Mail, MapPin, Phone } from "lucide-react"
+import { Mail, MapPin, Phone, Instagram } from "lucide-react"
 import { useState } from "react"
 import { toast } from "sonner"
 
@@ -96,6 +96,18 @@ export default function ContactPage() {
                                     </p>
                                 </div>
                             </div>
+
+                            <a href="https://www.instagram.com/GrowwithGosai/" target="_blank" rel="noreferrer" className="flex items-start gap-6 group">
+                                <div className="w-12 h-12 rounded-full bg-[var(--accent-blue)]/10 flex items-center justify-center text-[var(--accent-blue)] shrink-0 group-hover:bg-[var(--accent-blue)]/20 transition-colors">
+                                    <Instagram size={24} />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-[var(--text-light)] mb-2 group-hover:text-[var(--accent-blue)] transition-colors">Instagram</h3>
+                                    <p className="text-[var(--text-dim)] group-hover:text-[var(--text-light)] transition-colors">
+                                        @GrowwithGosai
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
 

@@ -21,7 +21,7 @@ export function Footer() {
                             <Link href="#" className="text-white/60 hover:text-[var(--accent)] transition-colors">
                                 <Twitter size={18} />
                             </Link>
-                            <Link href="#" className="text-white/60 hover:text-[var(--accent)] transition-colors">
+                            <Link href="https://www.instagram.com/GrowwithGosai/" target="_blank" rel="noreferrer" className="text-white/60 hover:text-[var(--accent)] transition-colors">
                                 <Instagram size={18} />
                             </Link>
                             <Link href="#" className="text-white/60 hover:text-[var(--accent)] transition-colors">

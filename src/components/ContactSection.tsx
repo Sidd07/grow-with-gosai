@@ -63,6 +63,15 @@ export function ContactSection() {
                                 <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs">Contact</h4>
                                 <p className="text-[var(--muted-foreground)] font-light">meet@growwithgosai.com<br />(647) 675-8404</p>
                             </div>
+                            <a
+                                href="https://www.instagram.com/GrowwithGosai/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="block p-8 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50 hover:border-[var(--primary)]/50 transition-colors group"
+                            >
+                                <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs group-hover:text-[var(--primary)] transition-colors">Instagram</h4>
+                                <p className="text-[var(--muted-foreground)] font-light group-hover:text-[var(--foreground)] transition-colors">@GrowwithGosai</p>
+                            </a>
                         </div>
                     </div>
 
