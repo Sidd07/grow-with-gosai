@@ -99,13 +99,13 @@ export function Hero() {
                         transition={{ duration: 0.8, delay: 1.0 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-8 px-4"
                     >
-                        <Link href="/exclusive-listings" className="w-full sm:w-auto">
+                        {/* <Link href="/exclusive-listings" className="w-full sm:w-auto">
                             <Button className="w-full sm:w-auto h-14 md:h-16 px-8 md:px-12 text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold rounded-none min-w-[200px] md:min-w-[220px] transition-all bg-white text-black hover:bg-[var(--primary)] hover:text-white border border-transparent">
                                 View exclusive Listings
                             </Button>
-                        </Link>
+                        </Link> */}
                         <Link href="/contact" className="w-full sm:w-auto">
-                            <Button variant="outline" className="w-full sm:w-auto h-14 md:h-16 px-8 md:px-12 text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold rounded-none min-w-[200px] md:min-w-[220px] transition-all border-white/40 text-white hover:bg-white hover:text-black hover:border-white">
+                            <Button className="w-full sm:w-auto h-14 md:h-16 px-8 md:px-12 text-[10px] md:text-xs uppercase tracking-[0.25em] font-bold rounded-none min-w-[200px] md:min-w-[220px] transition-all bg-white text-black hover:bg-[var(--primary)] hover:text-white border border-transparent">
                                 Get in Touch
                             </Button>
                         </Link>

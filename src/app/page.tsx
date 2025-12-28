@@ -10,7 +10,7 @@ export default function Home() {
     <main className="min-h-screen bg-[var(--background)]">
       <Hero />
       <PhilosophySection />
-      <CollectionSection />
+      {/* <CollectionSection /> */}
       <MarketPulseSection />
       <ReelsGallery />
       <ContactSection />
