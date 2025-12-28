@@ -17,13 +17,24 @@ export default function MediaPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    {/* Reel 1 */}
-                    <div className="shadow-2xl rounded-sm overflow-hidden border border-[var(--border)]/20">
-                        <InstagramReel url="https://www.instagram.com/reel/DOCB4n1jkA_/" />
-                    </div>
-
-                    {/* Placeholders for future reels */}
-                    {/* <InstagramReel url="..." /> */}
+                    {[
+                        'DPT4Lwnkvkx',
+                        'DQC19btj2l5',
+                        'DPE97TEj-9Y',
+                        'DPpHtCRjBVp',
+                        'DNRDhgOV3IF',
+                        'DIuIqm-B3j5',
+                        'DEXpWVfCw2i',
+                        'DARDToLOl-N',
+                        'C-LREPGOwCR',
+                        'C6o2J-POMKZ',
+                        'C5O5A5xOo0f',
+                        'DGQtdHXMVGS'
+                    ].map((shortcode) => (
+                        <div key={shortcode} className="shadow-2xl rounded-sm overflow-hidden border border-[var(--border)]/20 bg-white">
+                            <InstagramReel url={`https://www.instagram.com/reel/${shortcode}/`} />
+                        </div>
+                    ))}
                 </div>
             </div>
         </main>

@@ -61,7 +61,7 @@ export function Navbar() {
                 <div className="hidden md:flex items-center gap-10">
                     {[
                         { name: "Home", href: "/" },
-                        { name: "About", href: "/about" },
+                        { name: "About Us", href: "/about" },
                         { name: "Services", href: "/services", hasDropdown: true },
                         { name: "Exclusive Listings", href: "/exclusive-listings" },
                         { name: "Media", href: "/media" },
