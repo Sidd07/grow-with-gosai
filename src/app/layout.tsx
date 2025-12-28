@@ -22,6 +22,7 @@ import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { AuthProvider } from "@/components/AuthProvider";
 import { NewsletterPopup } from "@/components/NewsletterPopup";
+import { Toaster } from "sonner";
 
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
@@ -48,6 +49,7 @@ export default async function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <Toaster position="top-center" richColors />
             <NewsletterPopup />
           </AuthProvider>
         </ThemeProvider>

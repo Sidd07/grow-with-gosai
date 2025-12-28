@@ -63,7 +63,7 @@ export function Navbar() {
                         { name: "Home", href: "/" },
                         { name: "About Us", href: "/about" },
                         { name: "Services", href: "/services", hasDropdown: true },
-                        { name: "Exclusive Listings", href: "/exclusive-listings" },
+                        // { name: "Exclusive Listings", href: "/exclusive-listings" },
                         { name: "Media", href: "/media" },
                     ].map((item) => (
                         <div
@@ -178,10 +178,14 @@ export function Navbar() {
                         exit={{ opacity: 0, y: -20 }}
                         className="fixed inset-0 bg-[var(--background)] z-40 flex flex-col items-center justify-center gap-8 md:hidden"
                     >
-                        {["Home", "About", "Services", "Exclusive Listings", "Media", "Contact"].map((item) => (
+                        {["Home", "About Us", "Services", "Media", "Contact"].map((item) => (
                             <Link
                                 key={item}
-                                href={item === "Home" ? "/" : `/${item.toLowerCase().replace(" ", "-")}`}
+                                href={
+                                    item === "Home" ? "/" :
+                                        item === "About Us" ? "/about" :
+                                            `/${item.toLowerCase().replace(" ", "-")}`
+                                }
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-2xl font-serif font-light text-[var(--foreground)] hover:text-[var(--primary)] transition-colors"
                             >
