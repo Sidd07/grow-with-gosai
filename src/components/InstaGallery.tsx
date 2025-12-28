@@ -14,7 +14,7 @@ export function InstaGallery() {
                     </h2>
                     <p className="text-[var(--text-dim)]">@GrowwithGosai on Instagram</p>
                 </div>
-                <Link href="https://instagram.com" target="_blank">
+                <Link href="https://www.instagram.com/GrowwithGosai/" target="_blank">
                     <Button variant="outline" className="hidden md:flex gap-2">
                         <Instagram size={16} /> Follow Us
                     </Button>
