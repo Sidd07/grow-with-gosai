@@ -24,8 +24,8 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-[var(--text-light)] mb-2">Headquarters</h3>
                                     <p className="text-[var(--text-dim)]">
-                                        123 Business Avenue, Suite 100<br />
-                                        Toronto, ON M5V 2T6<br />
+                                        73 Water St N Unit # 300<br />
+                                        Cambridge, ON N1R 7L6<br />
                                         Canada
                                     </p>
                                 </div>
@@ -38,7 +38,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-[var(--text-light)] mb-2">Phone</h3>
                                     <p className="text-[var(--text-dim)]">
-                                        +1 (555) 000-0000<br />
+                                        (647) 675-8404<br />
                                         <span className="text-sm opacity-60">Mon-Fri, 9am - 6pm EST</span>
                                     </p>
                                 </div>
@@ -51,8 +51,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className="text-xl font-bold text-[var(--text-light)] mb-2">Email</h3>
                                     <p className="text-[var(--text-dim)]">
-                                        hello@growwithgosai.com<br />
-                                        investments@growwithgosai.com
+                                        meet@growwithgosai.com
                                     </p>
                                 </div>
                             </div>

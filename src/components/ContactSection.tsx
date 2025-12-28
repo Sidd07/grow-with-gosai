@@ -19,11 +19,11 @@ export function ContactSection() {
                         <div className="space-y-8">
                             <div className="p-8 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50">
                                 <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs">Office</h4>
-                                <p className="text-[var(--muted-foreground)] font-light">123 Business Ave, Suite 100<br />Toronto, ON M5V 2T6</p>
+                                <p className="text-[var(--muted-foreground)] font-light">73 Water St N Unit # 300<br />Cambridge, ON N1R 7L6</p>
                             </div>
                             <div className="p-8 bg-[var(--background)] rounded-sm shadow-sm border border-[var(--border)]/50">
                                 <h4 className="text-[var(--foreground)] font-bold mb-2 uppercase tracking-wider text-xs">Contact</h4>
-                                <p className="text-[var(--muted-foreground)] font-light">hello@growwithgosai.com<br />+1 (555) 000-0000</p>
+                                <p className="text-[var(--muted-foreground)] font-light">meet@growwithgosai.com<br />(647) 675-8404</p>
                             </div>
                         </div>
                     </div>

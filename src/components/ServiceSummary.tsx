@@ -9,16 +9,19 @@ const services = [
         icon: Building2,
         title: "Commercial Sales & Leasing",
         description: "Expert guidance in acquiring and disposing of office, retail, and industrial assets. We maximize value through strategic positioning and market intelligence.",
+        href: "/services/commercial-sales"
     },
     {
         icon: TrendingUp,
         title: "Investment Advisory",
         description: "Data-driven strategies to build and manage high-performing real estate portfolios. We identify emerging opportunities before the market catches up.",
+        href: "/services/investment-advisory"
     },
     {
         icon: Home,
         title: "Luxury Residential",
         description: "Bespoke service for high-net-worth individuals seeking premium residential properties. Access to exclusive off-market listings.",
+        href: "/services/luxury-residential"
     },
 ]
 
@@ -45,7 +48,7 @@ export function ServiceSummary() {
                             <p className="text-[var(--muted-foreground)] mb-10 leading-relaxed font-light">
                                 {service.description}
                             </p>
-                            <Link href="/services">
+                            <Link href={service.href}>
                                 <Button variant="link" className="p-0 text-[var(--primary)] hover:text-[var(--accent)] text-xs uppercase tracking-[0.2em] font-bold">
                                     Learn More &rarr;
                                 </Button>

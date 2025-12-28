@@ -29,8 +29,11 @@ export function Navbar() {
     // Luxury Text Logic:
     // Always dark text in light mode (default), white in dark mode.
     // Exception: If on Home Page AND NOT scrolled, use White (for Hero overlay).
+    // Exception: If on Home Page or Commercial Sales or Investment Advisory AND NOT scrolled, use White (for Hero overlay).
     const isHome = pathname === "/"
-    const isTransparent = isHome && !scrolled
+    const isCommercialSales = pathname === "/services/commercial-sales"
+    const isInvestmentAdvisory = pathname === "/services/investment-advisory"
+    const isTransparent = (isHome || isCommercialSales || isInvestmentAdvisory) && !scrolled
 
     return (
         <motion.nav
@@ -40,7 +43,7 @@ export function Navbar() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
                 scrolled
-                    ? "bg-white/5 backdrop-blur-md border-b border-white/10 py-4 shadow-sm"
+                    ? "bg-[var(--background)]/80 backdrop-blur-md border-b border-[var(--border)] py-4 shadow-sm"
                     : "bg-transparent py-8"
             )}
         >

@@ -74,11 +74,11 @@ export function Footer() {
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4 text-white/60 font-light text-sm">
                                 <MapPin size={18} className="text-[var(--accent)] shrink-0 mt-0.5" />
-                                <span>123 Business Ave, Suite 100<br />Toronto, ON M5V 2T6</span>
+                                <span>73 Water St N Unit # 300<br />Cambridge, ON N1R 7L6</span>
                             </li>
                             <li className="flex items-center gap-4 text-white/60 font-light text-sm">
                                 <Phone size={18} className="text-[var(--accent)] shrink-0" />
-                                <span>+1 (555) 000-0000</span>
+                                <span className="hover:text-[var(--accent)] transition-colors">(647) 675-8404</span>
                             </li>
                             <li className="flex items-center gap-4 text-white/60 font-light text-sm">
                                 <Mail size={18} className="text-[var(--accent)] shrink-0" />

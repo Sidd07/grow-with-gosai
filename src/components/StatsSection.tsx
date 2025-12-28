@@ -3,10 +3,10 @@
 import { motion } from "framer-motion"
 
 const stats = [
-    { value: "15+", label: "Years Experience" },
-    { value: "$500M+", label: "Volume Sold" },
-    { value: "1000+", label: "Happy Clients" },
-    { value: "Top 1%", label: "Nationwide" },
+    { value: "200+", label: "Clients Served" },
+    { value: "$10M+", label: "Volume Sold" },
+    { value: "50+", label: "Exclusive Listings" },
+    { value: "24/7", label: "Premium Support" },
 ]
 
 export function StatsSection() {

@@ -3,33 +3,26 @@
 import { useEffect, useRef, useState } from "react"
 
 export function ReelsGallery() {
-    const [reels, setReels] = useState<any[]>([])
-    const [loading, setLoading] = useState(true)
+    // Static reels configuration
+    const [reels] = useState([
+        { shortcode: 'DPT4Lwnkvkx' },
+        { shortcode: 'DQC19btj2l5' },
+        { shortcode: 'DPE97TEj-9Y' },
+        { shortcode: 'DPpHtCRjBVp' },
+        { shortcode: 'DNRDhgOV3IF' },
+        { shortcode: 'DIuIqm-B3j5' },
+        { shortcode: 'DEXpWVfCw2i' },
+        { shortcode: 'DARDToLOl-N' },
+        { shortcode: 'C-LREPGOwCR' },
+        { shortcode: 'C6o2J-POMKZ' },
+        { shortcode: 'C5O5A5xOo0f' },
+        { shortcode: 'DGQtdHXMVGS' }
+    ])
+    const [loading, setLoading] = useState(false)
 
+    // API call removed as requested - keeping static
     useEffect(() => {
-        const fetchReels = async () => {
-            try {
-                const res = await fetch('http://localhost:4000/instagram/reels')
-                if (res.ok) {
-                    const data = await res.json()
-                    // Duplicate for infinite scroll if we have enough items, else just show them
-                    // If we have very few, we might need to duplicate more
-                    setReels([...data, ...data, ...data])
-                } else {
-                    console.error("Failed to fetch reels")
-                    // Fallback to static if API fails (or token missing)
-                    const fallbackIds = ['C5lP1x_v1Z9', 'C5j2x_v1Z9', 'C5h3x_v1Z9', 'C5f4x_v1Z9']
-                    setReels([...fallbackIds, ...fallbackIds, ...fallbackIds].map(id => ({ shortcode: id })))
-                }
-            } catch (error) {
-                console.error("Error fetching reels", error)
-                const fallbackIds = ['C5lP1x_v1Z9', 'C5j2x_v1Z9', 'C5h3x_v1Z9', 'C5f4x_v1Z9']
-                setReels([...fallbackIds, ...fallbackIds, ...fallbackIds].map(id => ({ shortcode: id })))
-            } finally {
-                setLoading(false)
-            }
-        }
-        fetchReels()
+        // No-op
     }, [])
 
     if (loading) return <div className="py-24 text-center">Loading Reels...</div>
@@ -50,10 +43,12 @@ export function ReelsGallery() {
                             <iframe
                                 src={`https://www.instagram.com/reel/${reel.shortcode}/embed`}
                                 className="w-full h-full rounded-xl pointer-events-auto"
-                                frameBorder="0"
+                                style={{ border: 0 }}
                                 scrolling="no"
-                                allowTransparency={true}
+                                // @ts-expect-error: React requires lowercase for this legacy attribute, but TS expects camelCase
+                                allowtransparency="true"
                                 allow="encrypted-media"
+                                title={`Instagram Reel ${reel.shortcode}`}
                             ></iframe>
                         </div>
                     ))}

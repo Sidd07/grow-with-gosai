@@ -24,10 +24,10 @@ export function PhilosophySection() {
                         </h3>
                         <div className="space-y-8 text-[var(--muted-foreground)] text-lg md:text-xl font-light leading-relaxed max-w-lg">
                             <p>
-                                In a world of transactions, we choose transformation. Every property in our collection is selected not just for its market value, but for its potential to define a lifestyle, elevate a brand, and secure a future.
+                                In an era of high-frequency transactions, we choose intentional transformation. We view ourselves as strategic partners, navigating the complexities of the commercial landscape to unlock exceptional value where others see obstacles.
                             </p>
                             <p>
-                                From the skyline of Toronto to the hidden gems of the GTA, our approach is rooted in deep market intelligence and an unwavering commitment to the exceptional.
+                                From the evolving skylines of Toronto to the emerging corridors of the GTA, our approach is defined by sophisticated market intelligence and a relentless pursuit of the extraordinary.
                             </p>
                         </div>
                     </motion.div>
@@ -38,7 +38,7 @@ export function PhilosophySection() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 1.2, ease: "easeOut" }}
-                        className="relative h-[700px] w-full rounded-sm overflow-hidden shadow-xl"
+                        className="relative h-[700px] w-full rounded-sm overflow-hidden"
                     >
                         <Image
                             src="/realtor-profile.png"
@@ -46,7 +46,7 @@ export function PhilosophySection() {
                             fill
                             className="object-cover hover:scale-105 transition-transform duration-1000 ease-out"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+                        <div className="absolute inset-0 opacity-60" />
                     </motion.div>
 
                 </div>

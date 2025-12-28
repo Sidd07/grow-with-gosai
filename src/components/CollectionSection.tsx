@@ -8,19 +8,51 @@ import { useEffect, useState } from "react"
 import { Property } from "@/types/property"
 
 export function CollectionSection() {
-    const [collection, setCollection] = useState<Property[]>([])
+    // Static collection data
+    const [collection] = useState<Property[]>([
+        {
+            _id: '1',
+            title: 'The Sovereign Tower',
+            type: 'Commercial',
+            location: 'Downtown Finance District',
+            images: ['/images/commercial-sales-hero-light.png'],
+            price: 0,
+            description: '',
+            isShowcase: true,
+            isExclusive: false,
+            priority: 0,
+            createdAt: new Date().toISOString()
+        },
+        {
+            _id: '2',
+            title: 'Harbourview Complex',
+            type: 'Investment',
+            location: 'Waterfront, Toronto',
+            images: ['/images/investment-advisory-hero.png'],
+            price: 0,
+            description: '',
+            isShowcase: true,
+            isExclusive: false,
+            priority: 0,
+            createdAt: new Date().toISOString()
+        },
+        {
+            _id: '3',
+            title: 'Yorkville Retail Plaza',
+            type: 'Commercial',
+            location: 'Yorkville Ave',
+            images: ['/images/retail-storefront.png'],
+            price: 0,
+            description: '',
+            isShowcase: true,
+            isExclusive: false,
+            priority: 0,
+            createdAt: new Date().toISOString()
+        }
+    ])
 
     useEffect(() => {
-        const fetchShowcase = async () => {
-            try {
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000'}/api/properties?isShowcase=true`)
-                const data = await res.json()
-                setCollection(data)
-            } catch (error) {
-                console.error("Failed to fetch showcase", error)
-            }
-        }
-        fetchShowcase()
+        // Static data used - no API fetch
     }, [])
 
     if (collection.length === 0) return null
