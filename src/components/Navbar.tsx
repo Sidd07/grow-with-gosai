@@ -9,7 +9,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/Button"
 import { ThemeToggle } from "@/components/ThemeToggle"
-import { Menu, X, ChevronDown } from "lucide-react"
+import { Menu, X, ChevronDown, MapPin, Phone, Mail, Instagram } from "lucide-react"
 
 export function Navbar() {
     const { data: session } = useSession()
@@ -42,11 +42,50 @@ export function Navbar() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
                 scrolled
-                    ? "bg-[var(--background)]/80 backdrop-blur-md border-b border-[var(--border)] py-4 shadow-sm"
-                    : "bg-transparent py-8"
+                    ? "bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)] py-3 shadow-sm"
+                    : "bg-transparent py-0"
             )}
         >
-            <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
+            {/* Top Bar - Only visible when not scrolled or minimal when scrolled */}
+            <div className={cn(
+                "border-b border-white/10 transition-all duration-500 overflow-hidden",
+                scrolled ? "h-0 opacity-0" : "h-11 opacity-100"
+            )}>
+                <div className="container mx-auto px-6 md:px-12 h-full flex items-center justify-between text-[10px] uppercase tracking-[0.2em] font-medium">
+                    <div className={cn(
+                        "flex items-center gap-6 transition-colors duration-300",
+                        isTransparent ? "text-white/70" : "text-[var(--foreground)]/60"
+                    )}>
+                        <div className="flex items-center gap-2">
+                            <MapPin size={12} className="text-[var(--accent)]" />
+                            <span className="hidden lg:inline">73 Water St N Unit # 300, Cambridge, ON</span>
+                            <span className="lg:hidden">Cambridge, ON</span>
+                        </div>
+                    </div>
+                    <div className={cn(
+                        "flex items-center gap-8 transition-colors duration-300",
+                        isTransparent ? "text-white/70" : "text-[var(--foreground)]/60"
+                    )}>
+                        <a href="tel:6476758404" className="flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
+                            <Phone size={12} className="text-[var(--accent)]" />
+                            <span>(647) 675-8404</span>
+                        </a>
+                        <a href="mailto:meet@growwithgosai.com" className="hidden sm:flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
+                            <Mail size={12} className="text-[var(--accent)]" />
+                            <span>meet@growwithgosai.com</span>
+                        </a>
+                        <a href="https://www.instagram.com/GrowwithGosai/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
+                            <Instagram size={12} className="text-[var(--accent)]" />
+                            <span className="hidden md:inline">@GrowwithGosai</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className={cn(
+                "container mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-500",
+                !scrolled ? "py-8" : "py-0"
+            )}>
                 {/* Brand */}
                 <Link href="/" className="relative z-50 group">
                     <span className={cn(
