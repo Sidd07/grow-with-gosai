@@ -22,25 +22,26 @@ export function Hero() {
 
     return (
         <div className="relative h-screen w-full overflow-hidden bg-[var(--background)]">
-            {/* Cinematic Background - Premium Commercial Real Estate */}
+            {/* Cinematic Background - Pexels Video Background */}
             <div className="absolute inset-0 z-0">
-                {/* Fallback Image: https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop */}
                 <motion.div
-                    initial={{ scale: 1 }}
-                    animate={{ scale: 1.1 }}
-                    transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-                    className="relative w-full h-full"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 2 }}
+                    className="relative w-full h-full overflow-hidden"
                 >
-                    <Image
-                        src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
-                        alt="Modern Commercial Architecture"
-                        fill
-                        className="object-cover opacity-90"
-                        priority
-                    />
+                    <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover scale-[1.05] blur-[1.5px]"
+                    >
+                        <source src="https://videos.pexels.com/video-files/5601810/5601810-hd_1920_1080_30fps.mp4" type="video/mp4" />
+                    </video>
                 </motion.div>
                 {/* Elegant Overlay: Darker for better text visibility */}
-                <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
             </div>
 
             {/* Content */}
