@@ -54,7 +54,7 @@ export default async function ListingPage({ params }: Props) {
     if (!property) return <div className="min-h-screen flex items-center justify-center bg-[var(--background)] text-[var(--muted-foreground)] font-light">Property not found</div>
 
     return (
-        <div className="min-h-screen bg-[var(--background)] pt-32 pb-20">
+        <div className="min-h-screen bg-[var(--background)] pt-48 pb-20">
             {/* Hero Image */}
             <div className="relative h-[70vh] w-full mb-12">
                 <Image
@@ -110,7 +110,7 @@ export default async function ListingPage({ params }: Props) {
 
                     {/* Sidebar */}
                     <div className="lg:col-span-1">
-                        <div className="bg-[var(--card)] p-10 rounded-sm shadow-xl border border-[var(--border)]/20 sticky top-32">
+                        <div className="bg-[var(--card)] p-10 rounded-sm shadow-xl border border-[var(--border)]/20 sticky top-48">
                             <div className="mb-10">
                                 <p className="text-[var(--muted-foreground)] text-xs uppercase tracking-[0.2em] mb-2 font-medium">Price</p>
                                 <p className="text-5xl font-serif font-thin text-[var(--primary)]">

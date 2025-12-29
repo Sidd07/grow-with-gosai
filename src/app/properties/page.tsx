@@ -61,7 +61,7 @@ export default function PropertiesPage() {
 
     return (
         <main className="min-h-screen bg-[var(--soft-white)]">
-            <div className="pt-32 pb-12 bg-[var(--deep-navy)] text-center">
+            <div className="pt-48 pb-12 bg-[var(--deep-navy)] text-center">
                 <h1 className="text-4xl md:text-5xl font-serif font-bold text-[var(--soft-white)] mb-4">Our Properties</h1>
                 <p className="text-[var(--light-grey)]/80 max-w-2xl mx-auto px-4">
                     Explore our curated collection of premium commercial real estate opportunities.

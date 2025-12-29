@@ -5,7 +5,7 @@ import { ContactSection } from "@/components/ContactSection"
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen bg-[var(--background)] pt-32">
+        <main className="min-h-screen bg-[var(--background)] pt-48">
             <div className="container mx-auto px-6 md:px-12 py-20 text-center">
                 <h1 className="text-5xl md:text-7xl font-serif font-thin text-[var(--foreground)] mb-8">
                     Redefining <span className="text-[var(--primary)] italic font-light">Commercial Excellence</span>

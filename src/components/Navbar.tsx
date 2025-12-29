@@ -64,9 +64,10 @@ export function Navbar() {
                     "border-b border-white/10 transition-all duration-500 overflow-hidden",
                     scrolled || isMobileMenuOpen ? "h-0 opacity-0" : "h-11 opacity-100"
                 )}>
-                    <div className="container mx-auto px-6 md:px-12 h-full flex items-center justify-between text-[12px] uppercase tracking-[0.2em] font-semibold">
+                    <div className="container mx-auto px-6 md:px-12 h-full flex items-center justify-between text-[10px] md:text-[12px] uppercase tracking-[0.2em] font-semibold">
+                        {/* Desktop Only: Office Location */}
                         <div className={cn(
-                            "flex items-center gap-6 transition-colors duration-300",
+                            "hidden md:flex items-center gap-6 transition-colors duration-300",
                             isTransparent ? "text-white/70" : "text-[var(--foreground)]/60"
                         )}>
                             <div className="flex items-center gap-2">
@@ -75,21 +76,23 @@ export function Navbar() {
                                 <span className="lg:hidden">Cambridge, ON</span>
                             </div>
                         </div>
+
+                        {/* Mobile & Desktop: Contact Info */}
                         <div className={cn(
-                            "flex items-center gap-8 transition-colors duration-300",
+                            "flex items-center gap-4 md:gap-8 transition-colors duration-300 w-full md:w-auto",
                             isTransparent ? "text-white/70" : "text-[var(--foreground)]/60"
                         )}>
                             <a href="tel:6476758404" className="flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
                                 <Phone size={12} className="text-[var(--accent)]" />
                                 <span>(647) 675-8404</span>
                             </a>
-                            <a href="mailto:meet@growwithgosai.com" className="hidden sm:flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
+                            <a href="mailto:meet@growwithgosai.com" className="flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
                                 <Mail size={12} className="text-[var(--accent)]" />
                                 <span>meet@growwithgosai.com</span>
                             </a>
-                            <a href="https://www.instagram.com/GrowwithGosai/" target="_blank" rel="noreferrer" className="flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
+                            <a href="https://www.instagram.com/GrowwithGosai/" target="_blank" rel="noreferrer" className="hidden md:flex items-center gap-2 hover:text-[var(--accent)] transition-colors">
                                 <Instagram size={12} className="text-[var(--accent)]" />
-                                <span className="hidden md:inline">@GrowwithGosai</span>
+                                <span>@GrowwithGosai</span>
                             </a>
                         </div>
                     </div>
