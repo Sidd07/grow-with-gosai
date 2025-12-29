@@ -35,7 +35,7 @@ export function Hero() {
                         muted
                         loop
                         playsInline
-                        className="absolute inset-0 w-full h-full object-cover scale-[1.05] blur-[1.5px]"
+                        className="absolute inset-0 w-full h-full object-cover scale-[1.05] blur-[1px] md:blur-[1.4px]"
                     >
                         <source src="https://videos.pexels.com/video-files/5601810/5601810-hd_1920_1080_30fps.mp4" type="video/mp4" />
                     </video>
