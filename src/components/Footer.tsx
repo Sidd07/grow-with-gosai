@@ -74,7 +74,7 @@ export function Footer() {
                             </li>
                             <li>
                                 <Link href="/services/leasing" className="text-white/60 hover:text-[var(--accent)] transition-colors font-light text-sm">
-                                    Leasing
+                                    Commercial & Residential Leasing
                                 </Link>
                             </li>
                         </ul>
