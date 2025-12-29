@@ -54,7 +54,7 @@ export default async function ListingPage({ params }: Props) {
     if (!property) return <div className="min-h-screen flex items-center justify-center bg-[var(--background)] text-[var(--muted-foreground)] font-light">Property not found</div>
 
     return (
-        <div className="min-h-screen bg-[var(--background)] pt-48 pb-20">
+        <div className="min-h-screen bg-[var(--background)] pt-[150px] pb-20">
             {/* Hero Image */}
             <div className="relative h-[70vh] w-full mb-12">
                 <Image

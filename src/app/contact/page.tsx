@@ -44,7 +44,7 @@ export default function ContactPage() {
     }
 
     return (
-        <main className="min-h-screen bg-[var(--bg-dark)] pt-48 pb-20">
+        <main className="min-h-screen bg-[var(--bg-dark)] pt-[150px] pb-20">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 

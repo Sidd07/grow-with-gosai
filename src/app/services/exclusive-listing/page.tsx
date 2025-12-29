@@ -10,7 +10,7 @@ export default function ExclusiveListingPage() {
     return (
         <main className="min-h-screen bg-[var(--background)]">
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden pt-[150px]">
                 <Image
                     src="/images/exclusive-listing-hero.png" // Placeholder or existing
                     alt="Exclusive Listing Service"
@@ -115,11 +115,18 @@ export default function ExclusiveListingPage() {
                     <h2 className="text-4xl md:text-5xl font-serif font-thin text-[var(--foreground)] mb-10">
                         Ready to <span className="italic text-[var(--primary)]">List Your Asset?</span>
                     </h2>
-                    <Link href="/contact">
-                        <Button className="h-16 px-12 bg-[var(--primary)] text-[var(--background)] hover:bg-[var(--accent)] hover:text-white font-bold text-xs uppercase tracking-[0.3em] rounded-sm shadow-xl transition-all">
-                            Submit Listing Request
-                        </Button>
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Link href="/contact">
+                            <Button className="h-16 px-12 bg-white text-black hover:bg-[var(--primary)] hover:text-white font-bold text-xs uppercase tracking-[0.3em] rounded-sm shadow-xl transition-all w-full sm:w-auto border border-transparent">
+                                Submit Listing Request
+                            </Button>
+                        </Link>
+                        <Link href="/valuation">
+                            <Button variant="outline" className="h-16 px-12 border-white/20 text-white hover:bg-white hover:text-black font-bold text-xs uppercase tracking-[0.3em] rounded-sm shadow-xl transition-all w-full sm:w-auto">
+                                Request Valuation
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </section>
         </main>

@@ -7,7 +7,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     const title = slug.charAt(0).toUpperCase() + slug.slice(1).replace(/-/g, " ")
 
     return (
-        <main className="min-h-screen bg-[var(--bg-dark)] pt-48 pb-20">
+        <main className="min-h-screen bg-[var(--bg-dark)] pt-[150px] pb-20">
             <div className="container mx-auto px-4 md:px-6">
                 <Link href="/services" className="inline-flex items-center text-[var(--text-dim)] hover:text-[var(--accent-blue)] mb-8 transition-colors">
                     <ArrowLeft size={16} className="mr-2" /> Back to Services

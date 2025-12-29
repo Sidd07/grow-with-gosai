@@ -14,11 +14,6 @@ export function Footer() {
                         <p className="text-white/60 mb-8 leading-relaxed font-light max-w-xs">
                             Specializing in premium commercial real estate. We connect visionary businesses with exceptional properties.
                         </p>
-                        <div className="flex gap-6">
-                            <Link href="https://www.instagram.com/GrowwithGosai/" target="_blank" rel="noreferrer" className="text-white/60 hover:text-[var(--accent)] transition-colors">
-                                <Instagram size={18} />
-                            </Link>
-                        </div>
                     </div>
 
                     {/* Quick Links */}
@@ -43,6 +38,11 @@ export function Footer() {
                             <li>
                                 <Link href="/contact" className="text-white/60 hover:text-[var(--accent)] transition-colors font-light text-sm">
                                     Contact
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/faqs" className="text-white/60 hover:text-[var(--accent)] transition-colors font-light text-sm">
+                                    FAQs
                                 </Link>
                             </li>
                         </ul>
@@ -105,6 +105,17 @@ export function Footer() {
                                 <a href="mailto:meet@growwithgosai.com" className="flex items-center gap-4 text-white/60 hover:text-[var(--accent)] transition-colors font-light text-sm">
                                     <Mail size={18} className="text-[var(--accent)] shrink-0" />
                                     <span>meet@growwithgosai.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/GrowwithGosai/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="flex items-center gap-4 text-white/60 hover:text-[var(--accent)] transition-colors font-light text-sm"
+                                >
+                                    <Instagram size={18} className="text-[var(--accent)] shrink-0" />
+                                    <span>@GrowwithGosai</span>
                                 </a>
                             </li>
                         </ul>

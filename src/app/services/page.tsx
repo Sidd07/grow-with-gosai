@@ -3,9 +3,9 @@ import Link from "next/link"
 
 export default function ServicesPage() {
     return (
-        <div className="min-h-screen bg-[var(--background)] pt-40 px-6 md:px-12 pb-20">
+        <div className="min-h-screen bg-[var(--background)] pt-[150px] px-6 md:px-12 pb-20">
             <div className="container mx-auto">
-                <div className="text-center mb-20">
+                <div className="text-center mt-32 mb-20">
                     <h2 className="text-[var(--accent)] text-xs tracking-[0.4em] uppercase mb-6 font-medium">
                         Our Expertise
                     </h2>

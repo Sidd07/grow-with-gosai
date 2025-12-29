@@ -10,7 +10,7 @@ export default function LeasingPage() {
     return (
         <main className="min-h-screen bg-[var(--background)]">
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden pt-[150px]">
                 <Image
                     src="/images/leasing-hero.png" // Placeholder
                     alt="Leasing Services"

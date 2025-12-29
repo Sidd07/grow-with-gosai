@@ -10,7 +10,7 @@ export default function ResidentialSalesPage() {
     return (
         <main className="min-h-screen bg-[var(--background)]">
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden pt-[150px]">
                 <Image
                     src="/images/luxury-residential-hero.png" // I'll need to generate this
                     alt="Luxury Residential Sales"
@@ -86,11 +86,18 @@ export default function ResidentialSalesPage() {
                     <h2 className="text-4xl md:text-5xl font-serif font-thin text-[var(--foreground)] mb-10">
                         Experience the <span className="italic text-[var(--primary)]">Bespoke difference</span>.
                     </h2>
-                    <Link href="/contact">
-                        <Button className="h-16 px-12 bg-[var(--primary)] text-[var(--background)] hover:bg-[var(--accent)] hover:text-white font-bold text-xs uppercase tracking-[0.3em] rounded-sm shadow-xl transition-all">
-                            Request Private Consultation
-                        </Button>
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Link href="/contact">
+                            <Button className="h-16 px-12 bg-[var(--primary)] text-[var(--background)] hover:bg-[var(--accent)] hover:text-white font-bold text-xs uppercase tracking-[0.3em] rounded-sm shadow-xl transition-all w-full sm:w-auto">
+                                Request Private Consultation
+                            </Button>
+                        </Link>
+                        <Link href="/valuation">
+                            <Button variant="outline" className="h-16 px-12 border-[var(--primary)] text-[var(--foreground)] hover:bg-[var(--primary)] hover:text-white font-bold text-xs uppercase tracking-[0.3em] rounded-sm shadow-xl transition-all w-full sm:w-auto">
+                                Request Valuation
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </section>
         </main>

@@ -10,7 +10,7 @@ export default function InvestmentAdvisoryPage() {
     return (
         <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden pt-[150px]">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/investment-advisory-hero.png"
@@ -22,7 +22,7 @@ export default function InvestmentAdvisoryPage() {
                     <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" />
                 </div>
 
-                <div className="relative z-10 container mx-auto px-6 text-center text-white mt-16">
+                <div className="relative z-10 container mx-auto px-6 text-center text-white">
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -178,11 +178,18 @@ export default function InvestmentAdvisoryPage() {
                     <p className="text-xl text-[var(--background)]/80 mb-12 max-w-2xl mx-auto">
                         Speak with our investment advisors to build a resilient real estate portfolio.
                     </p>
-                    <Link href="/contact">
-                        <Button className="bg-[var(--accent)] text-[var(--foreground)] hover:bg-[var(--background)] hover:text-[var(--foreground)] px-10 py-8 text-lg rounded-none tracking-widest font-bold">
-                            START THE CONVERSATION <ArrowRight className="ml-2" />
-                        </Button>
-                    </Link>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Link href="/contact">
+                            <Button className="bg-[var(--accent)] text-[var(--foreground)] hover:bg-[var(--background)] hover:text-[var(--foreground)] px-10 py-8 text-lg rounded-none tracking-widest font-bold w-full sm:w-auto">
+                                START THE CONVERSATION <ArrowRight className="ml-2" />
+                            </Button>
+                        </Link>
+                        <Link href="/valuation">
+                            <Button variant="outline" className="border-white/20 text-white hover:bg-white hover:text-black px-10 py-8 text-lg rounded-none tracking-widest font-bold w-full sm:w-auto">
+                                REQUEST VALUATION
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </section>
         </main>

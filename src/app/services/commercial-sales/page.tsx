@@ -10,7 +10,7 @@ export default function CommercialSalesPage() {
     return (
         <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
             {/* Hero Section */}
-            <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+            <section className="relative h-[75vh] flex items-center justify-center overflow-hidden pt-[150px]">
                 <div className="absolute inset-0 z-0">
                     <Image
                         src="/images/commercial-sales-hero-light.png"
@@ -44,7 +44,7 @@ export default function CommercialSalesPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
                     >
-                        <Link href="/contact">
+                        <Link href="/valuation">
                             <Button className="bg-[var(--accent)] text-white hover:bg-[var(--accent)]/90 px-8 py-6 text-lg rounded-none tracking-widest uppercase">
                                 Request Valuation
                             </Button>

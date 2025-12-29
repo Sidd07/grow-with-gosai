@@ -55,7 +55,7 @@ export function Navbar() {
                 className={cn(
                     "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
                     scrolled
-                        ? "bg-[var(--background)]/90 backdrop-blur-md border-b border-[var(--border)] py-3 shadow-sm"
+                        ? "bg-[var(--background)]/90 backdrop-blur-md py-3 shadow-sm"
                         : "bg-transparent py-0"
                 )}
             >
@@ -100,7 +100,7 @@ export function Navbar() {
 
                 <div className={cn(
                     "container mx-auto px-6 md:px-12 flex items-center justify-between transition-all duration-500",
-                    !scrolled ? "py-8" : "py-0"
+                    !scrolled ? "py-6" : "py-0"
                 )}>
                     {/* Brand */}
                     <Link href="/" className="relative z-50 group">
@@ -234,7 +234,7 @@ export function Navbar() {
                         className="fixed inset-0 bg-[var(--background)] z-[100] flex flex-col md:hidden"
                     >
                         {/* Replicate Header bar in Overlay */}
-                        <div className="flex items-center justify-between px-6 py-8 border-b border-[var(--border)]/10">
+                        <div className="flex items-center justify-between px-6 py-6 border-b border-[var(--border)]/10">
                             <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
                                 <span className="text-2xl font-serif font-bold tracking-tighter text-[var(--foreground)]">
                                     Growwith<span className="text-[var(--accent)]">Gosai</span>
