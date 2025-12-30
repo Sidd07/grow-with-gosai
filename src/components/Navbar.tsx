@@ -64,7 +64,7 @@ export function Navbar() {
                     "border-b border-white/10 transition-all duration-500 overflow-hidden",
                     scrolled || isMobileMenuOpen ? "h-0 opacity-0" : "h-11 opacity-100"
                 )}>
-                    <div className="container mx-auto px-6 md:px-12 h-full flex items-center justify-between text-[10px] md:text-[12px] uppercase tracking-[0.2em] font-semibold">
+                    <div className="container mx-auto px-6 md:px-12 h-full flex items-center justify-between text-[10px] md:text-[12px] uppercase tracking-wider md:tracking-[0.2em] font-semibold">
                         {/* Desktop Only: Office Location */}
                         <div className={cn(
                             "hidden md:flex items-center gap-6 transition-colors duration-300",
